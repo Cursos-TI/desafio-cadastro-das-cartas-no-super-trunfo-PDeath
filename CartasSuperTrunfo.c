@@ -38,8 +38,8 @@ int main() {
     printf("Insira a quantidade de Pontos Turisticos da cidade: \n");
     scanf("%d", &pontoTuristico2);
     
-    printf("Carta 1: \n Estado: %s \n Codigo da Carta: %s \n  Nome da Cidade: %s \n  População:  %d\n  Area em Km^2: %f \n Pib: %f \n Pontos Turisticos: %d \n", estado, codCarta, nomeCidade, habitante, area, pib, pontoTuristico);
-    printf("Carta 2: \n Estado: %s \n Codigo da Carta: %s \n  Nome da Cidade: %s \n  População:  %d\n  Area em Km^2: %f \n Pib: %f \n Pontos Turisticos: %d \n", estado2, codCarta2, nomeCidade2, habitante2, area2, pib2, pontoTuristico2);
+    printf("Carta 1: \n Estado: %s\n Codigo da Carta: %s\n  Nome da Cidade: %s\n  População:  %d\n  Area em Km^2: %f\n Pib: %f\n Pontos Turisticos: %d\n", estado, codCarta, nomeCidade, habitante, area, pib, pontoTuristico);
+    printf("Carta 2: \n Estado: %s\n Codigo da Carta: %s\n  Nome da Cidade: %s\n  População:  %d\n  Area em Km^2: %f\n Pib: %f\n Pontos Turisticos: %d\n", estado2, codCarta2, nomeCidade2, habitante2, area2, pib2, pontoTuristico2);
     
     return 0;
 }
