@@ -3,20 +3,21 @@
 
 int main()
 {
-    char estado[15], codCarta[10], nomeCidade[50], estado2[15], codCarta2[10], nomeCidade2[50];
-    int  habitante, habitante2, pontoTuristico, pontoTuristico2; 
-    float area, pib, area2, pib2, densidadePopulacional, densidadePopulacional2, pibCapta, pibCapta2; 
+    char estado[50], codCarta[04], nomeCidade[50], estado2[50], codCarta2[04], nomeCidade2[50];
+    long unsigned int habitante, habitante2;
+    int pontoTuristico, pontoTuristico2; 
+    float area, pib, area2, pib2, densidadePopulacional, densidadePopulacional2, pibCapta, pibCapta2, superPoder1, superPoder2; 
 
     printf("Vamos comecar cadastrando as nossas cartas de SUPER TRUNFO!\n");
     printf("Insira os dados da primeira carta: \n");
     printf("Insira o Estado da sua carta (Informe uma letra entre A e H): \n");
-    scanf("%s", &estado);
+    scanf("%s", estado);
     printf("Insira o Codigo da sua carta de contendo a letra do Estado + um numero entre 01 e 04: \n");
-    scanf("%s", &codCarta);
+    scanf("%s", codCarta);
     printf("Insira o Nome da Cidade: \n");
-    scanf("%s", &nomeCidade);
+    scanf("%s", nomeCidade);
     printf("Insira o Numero de Habitantes: \n");
-    scanf("%d", &habitante);
+    scanf("%lu", &habitante);
     printf("Insira a area da cidade: \n");
     scanf("%f", &area);
     printf("Insira o PIB da cidade: \n");
@@ -26,48 +27,38 @@ int main()
 
     densidadePopulacional = (habitante / area);
     pibCapta = (pib / habitante);
+    superPoder1 = ((habitante + area + pib + pontoTuristico + pibCapta) - densidadePopulacional);
 
     printf("\nInsira os dados da segunda carta: \n");
     printf("\nInsira o Estado da sua carta (Informe uma letra entre A e H): \n");
-    scanf("%s", &estado2);
+    scanf("%s", estado2);
     printf("Insira o Codigo da sua carta de contendo a letra do Estado + um numero entre 01 e 04: \n");
-    scanf("%s", &codCarta2);
+    scanf("%s", codCarta2);
     printf("Insira o Nome da Cidade: \n");
-    scanf("%s", &nomeCidade2);
+    scanf("%s", nomeCidade2);
     printf("Insira o Numero de Habitantes: \n");
-    scanf("%d", &habitante2);
+    scanf("%lu", &habitante2);
     printf("Insira a area da cidade: \n");
     scanf("%f", &area2);
     printf("Insira o PIB da cidade: \n");
     scanf("%f", &pib2);
     printf("Insira a quantidade de Pontos Turisticos da cidade: \n");
-    scanf("%d", &pontoTuristico2);
+    scanf("%d", &pontoTuristico2); 
 
     densidadePopulacional2 = (habitante2 / area2);
     pibCapta2 = (pib2 / habitante2);
-    
-    printf("\nCarta 1: \n");
-    printf("Estado: %s \n", estado);
-    printf("Codigo da Carta: %s \n", codCarta);
-    printf("Nome da Cidade: %s \n", nomeCidade);
-    printf("Populacao: %d \n", habitante);
-    printf("Area: %.2f Km2 \n", area);
-    printf("Pib: %.2f \n", pib);
-    printf("Pontos Turisticos: %d \n", pontoTuristico);
-    printf("Densidade Populacional: %.2f hab/km^2\n", densidadePopulacional);
-    printf("PIB per Capta: %f \n", pibCapta);
-    
-    printf("\nCarta 2: \n");
-    printf("Estado: %s \n", estado2);
-    printf("Codigo da Carta: %s \n", codCarta2);
-    printf("Nome da Cidade: %s \n", nomeCidade2);
-    printf("Populacao: %d \n", habitante2);
-    printf("Area: %.2f km^2 \n", area2);
-    printf("Pib: %.2f \n", pib2);
-    printf("Pontos Turisticos: %d \n", pontoTuristico2);
-    printf("Densidade Populacional: %.2f hab/km^2\n", densidadePopulacional2);
-    printf("PIB per Capta: %f \n", pibCapta2);
+    superPoder2 = ((habitante2 + area2 + pib2 + pontoTuristico2 + pibCapta2) - densidadePopulacional2);
 
-    return 0;
+    printf(" ****  Comparacao de Cartas  ****\n");
+    printf("Populacao: %d \n", habitante > habitante2);
+    printf("Area: %d \n", area > area2);
+    printf("PIB: %d \n", pib > pib2);
+    printf("Pontos Turisticos: %d \n", pontoTuristico > pontoTuristico2);
+    printf("Densidade Populacional: %d \n", !(densidadePopulacional > densidadePopulacional2));
+    printf("PIB per Capta: %d \n", pibCapta > pibCapta2);
+    printf("Super Poder: %d \n", superPoder1 > superPoder2);
    
+    
+    return 0;
+    
 }
